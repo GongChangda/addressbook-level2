@@ -68,10 +68,14 @@ public class AddressBook {
         return new UniquePersonList(allPersons);
     }
 
+
     @Override
     public boolean equals(Object other) {
         return other == this // short circuit if same object
                 || (other instanceof AddressBook // instanceof handles nulls
                         && this.allPersons.equals(((AddressBook) other).allPersons));
+    }
+    public void sort(){
+        allPersons.sort();
     }
 }
